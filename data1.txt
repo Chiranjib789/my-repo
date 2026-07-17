@@ -1,0 +1,37 @@
+print('Welcome to Sahoo Hotel');
+print('1. Idly - 40');
+print('2. Dosa - 60');
+print('3. Vada - 120');
+print('4. Puri - 100');
+
+choice = int(input('Enter your Choice : '));
+
+if(choice == 1):
+    itemname = 'Idly';
+    price = 40;
+elif(choice == 2):
+    itemname = 'Dosa';
+    price = 60;
+elif(choice == 3):
+    itemname = 'Vada';
+    price = 120;
+elif(choice == 4):
+    itemname = 'Puri';
+    price = 100;
+else:
+    print('Invalid Choice');
+    
+print(f'Item Name is : {itemname}');
+print(f'Item Cost is : {price}');
+
+quantity = int(input('Enter quantity : '));
+
+billAmount = price * quantity;
+cgst = billAmount * (2.5 / 100);
+sgst = billAmount * (2.5 / 100);
+totalBill = billAmount + cgst + sgst;
+
+print(f'Bill Amount is : {billAmount}');
+print(f'CGST 2.5% : {cgst}');
+print(f'SGST 2.5% : {sgst}');
+print(f'Total Bill is : {totalBill}');
